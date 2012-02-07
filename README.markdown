@@ -1,6 +1,6 @@
 # This is... clojeopardy!
 
-Clojeopardy is an api-like screen scraper for the thoroughly awesome [J! Archives](http://j-archive.com/) written in Clojure.
+Clojeopardy is an api-like screen scraper for the thoroughly awesome [J! Archives](http://j-archive.com/) written in Clojure with the thoroughly awesome [Enlive](https://github.com/cgrand/enlive).
 
 ## Usage
 
