@@ -1,16 +1,17 @@
 # This is... clojeopardy!
 
-Clojeopardy is an api-like screen scraper for the thoroughly awesome J! Archives written in Clojure. 
+Clojeopardy is an api-like screen scraper for the thoroughly awesome [J! Archives](http://j-archive.com/) written in Clojure.
 
 ## Usage
 
 ```clj
 (require '[clojeopardy.core :as jeopardy])
 
-(jeopardy/clues 3446) ; lists all clues for game 3446
+; lists all clues for game 3446
+(jeopardy/clues 3446)
 
-(jeopardy/categories 3446) ; lists all categories for game 3446
-
+; lists all categories for game 3446
+(jeopardy/categories 3446)
 ```
 
 A few notes on usage:
