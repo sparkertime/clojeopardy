@@ -13,7 +13,7 @@ Clojeopardy is an api-like screen scraper for the thoroughly awesome [J! Archive
 ; lists all categories for game 3446
 (jeopardy/categories 3446)
 
-; all responses are just maps, so you can do things like
+; all responses are just seqs of maps, so you can do things like
 (filter :daily-double? (jeopardy/clues 3446))
 (filter #(= (%1 :round) :final) (jeopardy/categories 3446))
 ```
