@@ -1,5 +1,7 @@
 # This is... clojeopardy!
 
+Build Status (via Travis CI):[![Build Status](https://secure.travis-ci.org/citizenparker/clojeopardy.png?branch=master)](http://travis-ci.org/citizenparker/clojeopardy)
+
 Clojeopardy is an api-like screen scraper for the thoroughly awesome [J! Archive](http://j-archive.com/) written in Clojure with the thoroughly awesome [Enlive](https://github.com/cgrand/enlive).
 
 ## Usage
