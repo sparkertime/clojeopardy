@@ -12,4 +12,8 @@
 (deftest test-clues
   (with-fixtures
     (is (= (filter :daily-double? (jeopardy/clues 3446))
-           [{:question "rust", :answer "An olden theory said that when metallic iron loses its phlogiston, it becomes this remnant we know as an oxide", :category "none", :pos 5, :id 192760, :daily-double? true} {:question "Okinawa", :answer "The final land battle of WWII was fought on this island in the Ryukyus in June 1945", :category "none", :pos 5, :id 192770, :daily-double? true} {:question "calculus", :answer "The name of this branch of math comes from the Latin for \"small stone\"", :category "none", :pos 5, :id 192790, :daily-double? true}]))))
+           [{:question "rust", :answer "An olden theory said that when metallic iron loses its phlogiston, it becomes this remnant we know as an oxide", :category {:name "FERROUS, BUELLER", :comments "", :round :single, :pos 5},, :pos 5, :id "192760", :daily-double? true} {:question "Okinawa", :answer "The final land battle of WWII was fought on this island in the Ryukyus in June 1945", :category {:name "WORLD WAR II", :comments "", :round :double, :pos 1}, :pos 5, :id "192770", :daily-double? true} {:question "calculus", :answer "The name of this branch of math comes from the Latin for \"small stone\"", :category {:name "HERE'S 2 \"U\"", :comments "(Alex: Each correct response will contain two \"U\"s.)", :round :double, :pos 5}, :pos 5, :id "192790", :daily-double? true}]))))
+
+(deftest test-final-clue
+  (with-fixtures
+    (is (some #(= :final (get-in %1 [:category :round])) (jeopardy/clues 3446)))))
